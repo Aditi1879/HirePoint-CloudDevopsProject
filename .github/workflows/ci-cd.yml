@@ -64,3 +64,6 @@ jobs:
 
       - name: Push frontend image
         run: docker push aditiyadav30/hirepoint-frontend:latest
+
+      - name: Trigger Render deployment
+        run: curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
