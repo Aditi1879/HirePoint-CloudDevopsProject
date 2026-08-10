@@ -48,14 +48,7 @@ export const getCompany = async (req, res) => {
     try {
         const userId = req.id;
 
-        console.log("========== COMPANY DEBUG ==========");
-        console.log("Company request userId:", userId);
-
         const companies = await Company.find({ userId });
-
-        console.log("Companies found:", companies.length);
-        console.log("Companies:", companies);
-        console.log("===================================");
 
         // Prevent browser/proxy from returning an old cached response
         res.set(
