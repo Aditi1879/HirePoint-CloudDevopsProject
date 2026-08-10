@@ -10,27 +10,24 @@ export const useGetAllCompanies = () => {
     useEffect(() => {
         const fetchCompanies = async () => {
             try {
-                const url = `${COMPANY_API_END_POINT}/get?refresh=${Date.now()}`;
-
-                console.log("COMPANY API REQUEST:", url);
-
-                const res = await axios.get(url, {
-                    withCredentials: true,
-                    headers: {
-                        'Cache-Control': 'no-cache',
-                        'Pragma': 'no-cache'
+                const res = await axios.get(
+                    `${COMPANY_API_END_POINT}/get?refresh=${Date.now()}`,
+                    {
+                        withCredentials: true,
+                        headers: {
+                            'Cache-Control': 'no-cache',
+                            'Pragma': 'no-cache'
+                        }
                     }
-                });
+                );
 
-                console.log("COMPANY API RESPONSE:", res.data);
-                console.log("COMPANIES RECEIVED:", res.data.companies);
+                console.log("Companies API response:", res.data);
 
                 if (res.data.success) {
                     dispatch(setCompanies(res.data.companies));
                 }
             } catch (error) {
-                console.log("COMPANY API ERROR:", error);
-                console.log("ERROR RESPONSE:", error.response?.data);
+                console.log("Companies API error:", error);
             }
         };
 
