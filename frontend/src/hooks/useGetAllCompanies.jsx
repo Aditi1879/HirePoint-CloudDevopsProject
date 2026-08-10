@@ -15,19 +15,19 @@ export const useGetAllCompanies = () => {
                     {
                         withCredentials: true,
                         headers: {
-                            'Cache-Control': 'no-cache',
-                            'Pragma': 'no-cache'
+                            "Cache-Control": "no-cache",
+                            "Pragma": "no-cache"
                         }
                     }
                 );
 
-                console.log("Companies API response:", res.data);
+                console.log("COMPANIES API RESPONSE:", res.data);
 
                 if (res.data.success) {
                     dispatch(setCompanies(res.data.companies));
                 }
             } catch (error) {
-                console.log("Companies API error:", error);
+                console.log("COMPANIES API ERROR:", error);
             }
         };
 
