@@ -169,6 +169,10 @@ https://hirepoint-frontend.onrender.com
 
 https://hirepoint-backend-ccs6.onrender.com
 
+### Backend Health Check
+
+https://hirepoint-backend-ccs6.onrender.com/health
+
 The GitHub Actions workflow triggers the Render deployment using a secure Render Deploy Hook.
 
 This creates an automated flow from source-code changes to cloud deployment.
