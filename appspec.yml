@@ -1,0 +1,25 @@
+
+version: 0.0
+os: linux
+
+files:
+  - source: frontend/dist/
+    destination: /usr/share/nginx/html
+  - source: backend/
+    destination: /home/ssm-user/HirePoint-CloudDevopsProject/backend
+
+hooks:
+  AfterInstall:
+    - location: scripts/after_install.sh
+      timeout: 600
+      runas: root
+
+  ApplicationStart:
+    - location: scripts/application_start.sh
+      timeout: 300
+      runas: root
+
+  ValidateService:
+    - location: scripts/validate_service.sh
+      timeout: 120
+      runas: root

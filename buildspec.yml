@@ -1,0 +1,28 @@
+
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 22
+    commands:
+      - echo "Installing backend dependencies..."
+      - cd "$CODEBUILD_SRC_DIR/backend" && npm ci
+      - echo "Installing frontend dependencies..."
+      - cd "$CODEBUILD_SRC_DIR/frontend" && npm ci
+
+  build:
+    commands:
+      - echo "Building HirePoint frontend..."
+      - cd "$CODEBUILD_SRC_DIR/frontend" && npm run build
+
+artifacts:
+  files:
+    - appspec.yml
+    - scripts/**/*
+    - backend/**/*
+    - frontend/dist/**/*
+  exclude-paths:
+    - backend/node_modules/**/*
+    - backend/.env
+    - backend/.env.*
