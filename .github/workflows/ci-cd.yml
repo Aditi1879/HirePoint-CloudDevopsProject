@@ -54,16 +54,16 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Tag backend image
-        run: docker tag hirepoint-backend aditiyadav30/hirepoint-backend:latest
+        run: docker tag hirepoint-backend xaditi/hirepoint-backend:latest
 
       - name: Tag frontend image
-        run: docker tag hirepoint-frontend aditiyadav30/hirepoint-frontend:latest
+        run: docker tag hirepoint-frontend xaditi/hirepoint-frontend:latest
 
       - name: Push backend image
-        run: docker push aditiyadav30/hirepoint-backend:latest
+        run: docker push xaditi/hirepoint-backend:latest
 
       - name: Push frontend image
-        run: docker push aditiyadav30/hirepoint-frontend:latest
+        run: docker push xaditi/hirepoint-frontend:latest
 
       - name: Trigger Render deployment
         run: curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
