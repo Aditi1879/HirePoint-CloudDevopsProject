@@ -7,7 +7,9 @@ The repository demonstrates two deployment workflows:
 1. **AWS deployment:** GitHub source → AWS CodePipeline → AWS CodeBuild → AWS CodeDeploy → Amazon EC2.
 2. **Container-based workflow:** GitHub Actions validates the application, builds and publishes Docker images to Docker Hub, and triggers the configured Render deployment.
 
-The AWS-hosted application is available at **https://appfoundry.online**.
+**AWS Deployment URL:** https://appfoundry.online
+
+> **Deployment Status:** Currently offline. The AWS EC2 instance has been intentionally stopped to manage cloud infrastructure costs. The application was successfully deployed and tested on AWS and can be made available again for demonstrations by restarting the instance.
 
 ---
 
@@ -786,10 +788,15 @@ AWS service permissions are managed through IAM roles and policies. Do not place
 
 ## Deployment URLs
 
-### AWS-hosted Application
+### AWS Deployment
 
-- **Main domain:** [https://appfoundry.online](https://appfoundry.online)
-- **WWW domain:** [https://www.appfoundry.online](https://www.appfoundry.online)
+- **Application URL:** [https://appfoundry.online](https://appfoundry.online)
+- **WWW URL:** [https://www.appfoundry.online](https://www.appfoundry.online)
+- **Current Status:** Temporarily offline.
+
+The application was deployed on Amazon EC2 and configured with Nginx, PM2, and HTTPS using Certbot and Let's Encrypt.
+
+The EC2 instance is currently stopped to avoid ongoing compute costs. The deployment configuration and project implementation are documented in this repository.
 
 ### Render Deployment Endpoints
 
