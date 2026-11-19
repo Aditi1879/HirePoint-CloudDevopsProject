@@ -869,5 +869,7 @@ The project brings together application development, Docker, GitHub Actions, AWS
 ## Author
 
 **Aditi Yadav**
+
 MCA Student
+
 Cloud & DevOps Enthusiast
