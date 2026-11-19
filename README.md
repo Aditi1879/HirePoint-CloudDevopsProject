@@ -120,6 +120,19 @@ The application includes role-specific user and recruiter functionality, JWT-bas
 
 ---
 
+## Codebase Architecture Diagram
+
+The following diagram provides a high-level overview of HirePoint's
+application architecture, including the frontend, backend API,
+database, and media/file storage components.
+
+[![HirePoint Architecture Diagram](https://gitdiagram.com/aditi1879/hirepoint-clouddevopsproject/diagram.png)](https://gitdiagram.com/aditi1879/hirepoint-clouddevopsproject)
+
+Click the diagram to explore the interactive architecture and
+understand how the different components connect.
+
+---
+
 ## Architecture Overview
 
 ### AWS Deployment Architecture
