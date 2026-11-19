@@ -16,6 +16,7 @@ The AWS-hosted application is available at **https://appfoundry.online**.
 - [Project Overview](#project-overview)
 - [Application Features](#application-features)
 - [Technology Stack](#technology-stack)
+- [Codebase Architecture Diagram](#codebase-architecture-diagram)
 - [Architecture Overview](#architecture-overview)
 - [AWS Services Implemented](#aws-services-implemented)
 - [AWS Deployment Workflow](#aws-deployment-workflow)
