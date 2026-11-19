@@ -794,9 +794,9 @@ AWS service permissions are managed through IAM roles and policies. Do not place
 - **WWW URL:** [https://www.appfoundry.online](https://www.appfoundry.online)
 - **Current Status:** Temporarily offline.
 
-The application was deployed on Amazon EC2 and configured with Nginx, PM2, and HTTPS using Certbot and Let's Encrypt.
+The application was successfully deployed on Amazon EC2 and configured with Nginx, PM2, and HTTPS using Certbot and Let's Encrypt.
 
-The EC2 instance is currently stopped to avoid ongoing compute costs. The deployment configuration and project implementation are documented in this repository.
+The EC2 instance is currently stopped to manage cloud infrastructure costs. The deployment configuration and implementation are documented in this repository. The application can be brought online again by restarting the instance and verifying the DNS configuration.
 
 ### Render Deployment Endpoints
 
